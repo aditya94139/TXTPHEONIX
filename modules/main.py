@@ -53,7 +53,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["TXT"]) & SUDOERS)
+@bot.on_message(filters.command(["upvid"]) & SUDOERS)
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT file 📩')
     input: Message = await bot.listen(editable.chat.id)
@@ -174,8 +174,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**Vid_id  »** {str(count).zfill(3)}\n\n**Title  »** {name1} {res} .mkv\n\n**Batch »** {raw_text0}\n\n**Download by »** {raw_text3}\n\n'
-                cc1 = f'**Vid_id  »** {str(count).zfill(3)}\n\n**Title »** {name1} .pdf \n\n**Batch »** {raw_text0}\n\n**Download by »** {raw_text3}\n\n'
+                cc = f'[🎥]**Vid_id  »** {str(count).zfill(3)}\n\n**Title  »** {name1} {res} .mkv\n\n**Batch »** {raw_text0}\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤** {raw_text3}\n\n'
+                cc1 = f'[📕]**Vid_id  »** {str(count).zfill(3)}\n\n**Title »** {name1} .pdf \n\n**Batch »** {raw_text0}\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤** {raw_text3}\n\n'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -218,7 +218,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("✅ D O N E ✅")
+    await m.reply_text("D O N E ✅")
 
 
 bot.run()
